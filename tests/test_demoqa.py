@@ -6,7 +6,7 @@ fake = Faker()
 
 
 def test_demoqa():
-    b.open('/')
+    b.open('/browser.config.window_height = 2160')
     first_name, last_name = [i for i in fake.name().split()]
     b.element('#firstName').should(be.blank).type(first_name)
     b.element('#lastName').should(be.blank).type(last_name)
